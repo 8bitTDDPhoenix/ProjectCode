@@ -1,0 +1,16 @@
+
+State Machine - |code_lock_projekt_tester|wrong_code:U2|present_state
+Name present_state.err_3 present_state.err_2 present_state.err_1 present_state.err_0 
+present_state.err_0 0 0 0 0 
+present_state.err_1 0 0 1 1 
+present_state.err_2 0 1 0 1 
+present_state.err_3 1 0 0 1 
+
+State Machine - |code_lock_projekt_tester|code_lock_projekt:U1|present_state
+Name present_state.permanently_locked_state present_state.wrong_code_state present_state.going_idle_state present_state.unlocked_state present_state.evaluating1_state present_state.idle_state 
+present_state.idle_state 0 0 0 0 0 0 
+present_state.evaluating1_state 0 0 0 0 1 1 
+present_state.unlocked_state 0 0 0 1 0 1 
+present_state.going_idle_state 0 0 1 0 0 1 
+present_state.wrong_code_state 0 1 0 0 0 1 
+present_state.permanently_locked_state 1 0 0 0 0 1 

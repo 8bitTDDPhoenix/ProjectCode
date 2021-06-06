@@ -1,0 +1,1026 @@
+TimeQuest Timing Analyzer report for code_lock_2_semesterprojekt
+Sun Jun 06 10:18:33 2021
+Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. TimeQuest Timing Analyzer Summary
+  3. Parallel Compilation
+  4. Clocks
+  5. Slow Model Fmax Summary
+  6. Slow Model Setup Summary
+  7. Slow Model Hold Summary
+  8. Slow Model Recovery Summary
+  9. Slow Model Removal Summary
+ 10. Slow Model Minimum Pulse Width Summary
+ 11. Slow Model Setup: 'CLOCK_50'
+ 12. Slow Model Setup: 'KEY[0]'
+ 13. Slow Model Hold: 'CLOCK_50'
+ 14. Slow Model Hold: 'KEY[0]'
+ 15. Slow Model Minimum Pulse Width: 'CLOCK_50'
+ 16. Slow Model Minimum Pulse Width: 'KEY[0]'
+ 17. Setup Times
+ 18. Hold Times
+ 19. Clock to Output Times
+ 20. Minimum Clock to Output Times
+ 21. Fast Model Setup Summary
+ 22. Fast Model Hold Summary
+ 23. Fast Model Recovery Summary
+ 24. Fast Model Removal Summary
+ 25. Fast Model Minimum Pulse Width Summary
+ 26. Fast Model Setup: 'KEY[0]'
+ 27. Fast Model Setup: 'CLOCK_50'
+ 28. Fast Model Hold: 'CLOCK_50'
+ 29. Fast Model Hold: 'KEY[0]'
+ 30. Fast Model Minimum Pulse Width: 'CLOCK_50'
+ 31. Fast Model Minimum Pulse Width: 'KEY[0]'
+ 32. Setup Times
+ 33. Hold Times
+ 34. Clock to Output Times
+ 35. Minimum Clock to Output Times
+ 36. Multicorner Timing Analysis Summary
+ 37. Setup Times
+ 38. Hold Times
+ 39. Clock to Output Times
+ 40. Minimum Clock to Output Times
+ 41. Setup Transfers
+ 42. Hold Transfers
+ 43. Report TCCS
+ 44. Report RSKM
+ 45. Unconstrained Paths
+ 46. TimeQuest Timing Analyzer Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++----------------------------------------------------------------------------------------+
+; TimeQuest Timing Analyzer Summary                                                      ;
++--------------------+-------------------------------------------------------------------+
+; Quartus II Version ; Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition ;
+; Revision Name      ; code_lock_2_semesterprojekt                                       ;
+; Device Family      ; Cyclone II                                                        ;
+; Device Name        ; EP2C35F672C6                                                      ;
+; Timing Models      ; Final                                                             ;
+; Delay Model        ; Combined                                                          ;
+; Rise/Fall Delays   ; Unavailable                                                       ;
++--------------------+-------------------------------------------------------------------+
+
+
+Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
++-------------------------------------+
+; Parallel Compilation                ;
++----------------------------+--------+
+; Processors                 ; Number ;
++----------------------------+--------+
+; Number detected on machine ; 8      ;
+; Maximum allowed            ; 1      ;
++----------------------------+--------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clocks                                                                                                                                                                               ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+--------------+
+; Clock Name ; Type ; Period ; Frequency  ; Rise  ; Fall  ; Duty Cycle ; Divide by ; Multiply by ; Phase ; Offset ; Edge List ; Edge Shift ; Inverted ; Master ; Source ; Targets      ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+--------------+
+; CLOCK_50   ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { CLOCK_50 } ;
+; KEY[0]     ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { KEY[0] }   ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+--------------+
+
+
++--------------------------------------------------+
+; Slow Model Fmax Summary                          ;
++------------+-----------------+------------+------+
+; Fmax       ; Restricted Fmax ; Clock Name ; Note ;
++------------+-----------------+------------+------+
+; 299.04 MHz ; 299.04 MHz      ; CLOCK_50   ;      ;
++------------+-----------------+------------+------+
+This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
+
+
++-----------------------------------+
+; Slow Model Setup Summary          ;
++----------+--------+---------------+
+; Clock    ; Slack  ; End Point TNS ;
++----------+--------+---------------+
+; CLOCK_50 ; -2.344 ; -19.003       ;
+; KEY[0]   ; -1.446 ; -1.446        ;
++----------+--------+---------------+
+
+
++----------------------------------+
+; Slow Model Hold Summary          ;
++----------+-------+---------------+
+; Clock    ; Slack ; End Point TNS ;
++----------+-------+---------------+
+; CLOCK_50 ; 0.281 ; 0.000         ;
+; KEY[0]   ; 1.461 ; 0.000         ;
++----------+-------+---------------+
+
+
+-------------------------------
+; Slow Model Recovery Summary ;
+-------------------------------
+No paths to report.
+
+
+------------------------------
+; Slow Model Removal Summary ;
+------------------------------
+No paths to report.
+
+
++----------------------------------------+
+; Slow Model Minimum Pulse Width Summary ;
++----------+--------+--------------------+
+; Clock    ; Slack  ; End Point TNS      ;
++----------+--------+--------------------+
+; CLOCK_50 ; -1.380 ; -11.380            ;
+; KEY[0]   ; -1.222 ; -1.222             ;
++----------+--------+--------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Setup: 'CLOCK_50'                                                                                                                                                                             ;
++--------+-------------------------------------------------------------+-------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node                                                   ; To Node                                                     ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+-------------------------------------------------------------+-------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; -2.344 ; code_lock_projekt:U1|present_state.evaluating1_state        ; code_lock_projekt:U1|present_state.idle_state               ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -1.476     ; 1.904      ;
+; -2.342 ; code_lock_projekt:U1|present_state.evaluating1_state        ; code_lock_projekt:U1|present_state.wrong_code_state         ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -1.476     ; 1.902      ;
+; -2.210 ; code_lock_projekt:U1|present_state.evaluating1_state        ; wrong_code:U2|present_state.err_0                           ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -1.476     ; 1.770      ;
+; -2.210 ; code_lock_projekt:U1|present_state.evaluating1_state        ; wrong_code:U2|present_state.err_1                           ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -1.476     ; 1.770      ;
+; -2.210 ; code_lock_projekt:U1|present_state.evaluating1_state        ; wrong_code:U2|present_state.err_2                           ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -1.476     ; 1.770      ;
+; -1.983 ; code_lock_projekt:U1|present_state.evaluating1_state        ; code_lock_projekt:U1|present_state.evaluating1_state        ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.000      ; 3.019      ;
+; -1.953 ; code_lock_projekt:U1|present_state.evaluating1_state        ; wrong_code:U2|present_state.err_3                           ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -1.476     ; 1.513      ;
+; -1.651 ; code_lock_projekt:U1|present_state.evaluating1_state        ; code_lock_projekt:U1|present_state.unlocked_state           ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -1.476     ; 1.211      ;
+; -1.425 ; code_lock_projekt:U1|present_state.wrong_code_state         ; code_lock_projekt:U1|present_state.idle_state               ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.000      ; 2.461      ;
+; -1.423 ; code_lock_projekt:U1|present_state.wrong_code_state         ; code_lock_projekt:U1|present_state.wrong_code_state         ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.000      ; 2.459      ;
+; -1.366 ; code_lock_projekt:U1|present_state.going_idle_state         ; code_lock_projekt:U1|present_state.idle_state               ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.000      ; 2.402      ;
+; -1.364 ; code_lock_projekt:U1|present_state.going_idle_state         ; code_lock_projekt:U1|present_state.wrong_code_state         ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.000      ; 2.400      ;
+; -1.159 ; code_lock_projekt:U1|present_state.unlocked_state           ; code_lock_projekt:U1|present_state.idle_state               ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.000      ; 2.195      ;
+; -1.157 ; code_lock_projekt:U1|present_state.unlocked_state           ; code_lock_projekt:U1|present_state.wrong_code_state         ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.000      ; 2.193      ;
+; -1.132 ; code_lock_projekt:U1|present_state.wrong_code_state         ; code_lock_projekt:U1|present_state.going_idle_state         ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.000      ; 2.168      ;
+; -1.107 ; code_lock_projekt:U1|present_state.going_idle_state         ; code_lock_projekt:U1|present_state.going_idle_state         ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.000      ; 2.143      ;
+; -1.092 ; code_lock_projekt:U1|present_state.unlocked_state           ; code_lock_projekt:U1|present_state.going_idle_state         ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.000      ; 2.128      ;
+; -1.087 ; code_lock_projekt:U1|present_state.idle_state               ; code_lock_projekt:U1|present_state.idle_state               ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.000      ; 2.123      ;
+; -1.085 ; code_lock_projekt:U1|present_state.idle_state               ; code_lock_projekt:U1|present_state.wrong_code_state         ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.000      ; 2.121      ;
+; -0.968 ; wrong_code:U2|present_state.err_3                           ; code_lock_projekt:U1|present_state.permanently_locked_state ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.000      ; 2.004      ;
+; -0.852 ; code_lock_projekt:U1|present_state.wrong_code_state         ; code_lock_projekt:U1|present_state.permanently_locked_state ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.000      ; 1.888      ;
+; -0.787 ; wrong_code:U2|present_state.err_2                           ; wrong_code:U2|present_state.err_3                           ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.000      ; 1.823      ;
+; -0.658 ; code_lock_projekt:U1|present_state.idle_state               ; code_lock_projekt:U1|present_state.evaluating1_state        ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 1.476      ; 3.170      ;
+; -0.630 ; code_lock_projekt:U1|present_state.unlocked_state           ; code_lock_projekt:U1|present_state.unlocked_state           ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.000      ; 1.666      ;
+; -0.611 ; wrong_code:U2|present_state.err_3                           ; code_lock_projekt:U1|present_state.going_idle_state         ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.000      ; 1.647      ;
+; -0.577 ; code_lock_projekt:U1|present_state.permanently_locked_state ; code_lock_projekt:U1|present_state.idle_state               ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.000      ; 1.613      ;
+; -0.575 ; code_lock_projekt:U1|present_state.permanently_locked_state ; code_lock_projekt:U1|present_state.wrong_code_state         ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.000      ; 1.611      ;
+; -0.235 ; KEY[0]                                                      ; code_lock_projekt:U1|present_state.evaluating1_state        ; KEY[0]       ; CLOCK_50    ; 0.500        ; 4.126      ; 4.897      ;
+; -0.224 ; KEY[0]                                                      ; code_lock_projekt:U1|present_state.idle_state               ; KEY[0]       ; CLOCK_50    ; 0.500        ; 2.650      ; 3.410      ;
+; -0.222 ; KEY[0]                                                      ; code_lock_projekt:U1|present_state.wrong_code_state         ; KEY[0]       ; CLOCK_50    ; 0.500        ; 2.650      ; 3.408      ;
+; -0.191 ; KEY[0]                                                      ; code_lock_projekt:U1|present_state.unlocked_state           ; KEY[0]       ; CLOCK_50    ; 0.500        ; 2.650      ; 3.377      ;
+; -0.084 ; KEY[0]                                                      ; wrong_code:U2|present_state.err_0                           ; KEY[0]       ; CLOCK_50    ; 0.500        ; 2.650      ; 3.270      ;
+; -0.084 ; KEY[0]                                                      ; wrong_code:U2|present_state.err_1                           ; KEY[0]       ; CLOCK_50    ; 0.500        ; 2.650      ; 3.270      ;
+; -0.084 ; KEY[0]                                                      ; wrong_code:U2|present_state.err_2                           ; KEY[0]       ; CLOCK_50    ; 0.500        ; 2.650      ; 3.270      ;
+; -0.031 ; wrong_code:U2|present_state.err_1                           ; wrong_code:U2|present_state.err_2                           ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.000      ; 1.067      ;
+; -0.031 ; KEY[0]                                                      ; code_lock_projekt:U1|present_state.permanently_locked_state ; KEY[0]       ; CLOCK_50    ; 0.500        ; 2.650      ; 3.217      ;
+; -0.019 ; KEY[0]                                                      ; wrong_code:U2|present_state.err_3                           ; KEY[0]       ; CLOCK_50    ; 0.500        ; 2.650      ; 3.205      ;
+; -0.011 ; KEY[0]                                                      ; code_lock_projekt:U1|present_state.going_idle_state         ; KEY[0]       ; CLOCK_50    ; 0.500        ; 2.650      ; 3.197      ;
+; 0.005  ; wrong_code:U2|present_state.err_0                           ; wrong_code:U2|present_state.err_1                           ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.000      ; 1.031      ;
+; 0.265  ; KEY[0]                                                      ; code_lock_projekt:U1|present_state.evaluating1_state        ; KEY[0]       ; CLOCK_50    ; 1.000        ; 4.126      ; 4.897      ;
+; 0.276  ; KEY[0]                                                      ; code_lock_projekt:U1|present_state.idle_state               ; KEY[0]       ; CLOCK_50    ; 1.000        ; 2.650      ; 3.410      ;
+; 0.278  ; KEY[0]                                                      ; code_lock_projekt:U1|present_state.wrong_code_state         ; KEY[0]       ; CLOCK_50    ; 1.000        ; 2.650      ; 3.408      ;
+; 0.309  ; KEY[0]                                                      ; code_lock_projekt:U1|present_state.unlocked_state           ; KEY[0]       ; CLOCK_50    ; 1.000        ; 2.650      ; 3.377      ;
+; 0.379  ; wrong_code:U2|present_state.err_3                           ; wrong_code:U2|present_state.err_3                           ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.000      ; 0.657      ;
+; 0.379  ; code_lock_projekt:U1|present_state.permanently_locked_state ; code_lock_projekt:U1|present_state.permanently_locked_state ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.000      ; 0.657      ;
+; 0.416  ; KEY[0]                                                      ; wrong_code:U2|present_state.err_0                           ; KEY[0]       ; CLOCK_50    ; 1.000        ; 2.650      ; 3.270      ;
+; 0.416  ; KEY[0]                                                      ; wrong_code:U2|present_state.err_1                           ; KEY[0]       ; CLOCK_50    ; 1.000        ; 2.650      ; 3.270      ;
+; 0.416  ; KEY[0]                                                      ; wrong_code:U2|present_state.err_2                           ; KEY[0]       ; CLOCK_50    ; 1.000        ; 2.650      ; 3.270      ;
+; 0.469  ; KEY[0]                                                      ; code_lock_projekt:U1|present_state.permanently_locked_state ; KEY[0]       ; CLOCK_50    ; 1.000        ; 2.650      ; 3.217      ;
+; 0.481  ; KEY[0]                                                      ; wrong_code:U2|present_state.err_3                           ; KEY[0]       ; CLOCK_50    ; 1.000        ; 2.650      ; 3.205      ;
+; 0.489  ; KEY[0]                                                      ; code_lock_projekt:U1|present_state.going_idle_state         ; KEY[0]       ; CLOCK_50    ; 1.000        ; 2.650      ; 3.197      ;
++--------+-------------------------------------------------------------+-------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Setup: 'KEY[0]'                                                                                                                                   ;
++--------+---------------------------------------------------+---------------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node                                         ; To Node                   ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+---------------------------------------------------+---------------------------+--------------+-------------+--------------+------------+------------+
+; -1.446 ; code_lock_projekt:U1|present_state.unlocked_state ; code_lock_projekt:U1|lock ; CLOCK_50     ; KEY[0]      ; 0.500        ; -0.244     ; 0.717      ;
++--------+---------------------------------------------------+---------------------------+--------------+-------------+--------------+------------+------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Hold: 'CLOCK_50'                                                                                                                                                                             ;
++-------+-------------------------------------------------------------+-------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node                                                   ; To Node                                                     ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+-------------------------------------------------------------+-------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; 0.281 ; KEY[0]                                                      ; code_lock_projekt:U1|present_state.going_idle_state         ; KEY[0]       ; CLOCK_50    ; 0.000        ; 2.650      ; 3.197      ;
+; 0.289 ; KEY[0]                                                      ; wrong_code:U2|present_state.err_3                           ; KEY[0]       ; CLOCK_50    ; 0.000        ; 2.650      ; 3.205      ;
+; 0.289 ; KEY[0]                                                      ; code_lock_projekt:U1|present_state.wrong_code_state         ; KEY[0]       ; CLOCK_50    ; 0.000        ; 2.650      ; 3.205      ;
+; 0.293 ; KEY[0]                                                      ; code_lock_projekt:U1|present_state.idle_state               ; KEY[0]       ; CLOCK_50    ; 0.000        ; 2.650      ; 3.209      ;
+; 0.301 ; KEY[0]                                                      ; code_lock_projekt:U1|present_state.permanently_locked_state ; KEY[0]       ; CLOCK_50    ; 0.000        ; 2.650      ; 3.217      ;
+; 0.354 ; KEY[0]                                                      ; wrong_code:U2|present_state.err_0                           ; KEY[0]       ; CLOCK_50    ; 0.000        ; 2.650      ; 3.270      ;
+; 0.354 ; KEY[0]                                                      ; wrong_code:U2|present_state.err_1                           ; KEY[0]       ; CLOCK_50    ; 0.000        ; 2.650      ; 3.270      ;
+; 0.354 ; KEY[0]                                                      ; wrong_code:U2|present_state.err_2                           ; KEY[0]       ; CLOCK_50    ; 0.000        ; 2.650      ; 3.270      ;
+; 0.391 ; wrong_code:U2|present_state.err_3                           ; wrong_code:U2|present_state.err_3                           ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; code_lock_projekt:U1|present_state.wrong_code_state         ; code_lock_projekt:U1|present_state.wrong_code_state         ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; code_lock_projekt:U1|present_state.permanently_locked_state ; code_lock_projekt:U1|present_state.permanently_locked_state ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; code_lock_projekt:U1|present_state.idle_state               ; code_lock_projekt:U1|present_state.idle_state               ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; code_lock_projekt:U1|present_state.unlocked_state           ; code_lock_projekt:U1|present_state.unlocked_state           ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.657      ;
+; 0.461 ; KEY[0]                                                      ; code_lock_projekt:U1|present_state.unlocked_state           ; KEY[0]       ; CLOCK_50    ; 0.000        ; 2.650      ; 3.377      ;
+; 0.505 ; KEY[0]                                                      ; code_lock_projekt:U1|present_state.evaluating1_state        ; KEY[0]       ; CLOCK_50    ; 0.000        ; 4.126      ; 4.897      ;
+; 0.765 ; wrong_code:U2|present_state.err_0                           ; wrong_code:U2|present_state.err_1                           ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.031      ;
+; 0.781 ; KEY[0]                                                      ; code_lock_projekt:U1|present_state.going_idle_state         ; KEY[0]       ; CLOCK_50    ; -0.500       ; 2.650      ; 3.197      ;
+; 0.789 ; KEY[0]                                                      ; wrong_code:U2|present_state.err_3                           ; KEY[0]       ; CLOCK_50    ; -0.500       ; 2.650      ; 3.205      ;
+; 0.789 ; KEY[0]                                                      ; code_lock_projekt:U1|present_state.wrong_code_state         ; KEY[0]       ; CLOCK_50    ; -0.500       ; 2.650      ; 3.205      ;
+; 0.793 ; KEY[0]                                                      ; code_lock_projekt:U1|present_state.idle_state               ; KEY[0]       ; CLOCK_50    ; -0.500       ; 2.650      ; 3.209      ;
+; 0.801 ; wrong_code:U2|present_state.err_1                           ; wrong_code:U2|present_state.err_2                           ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.067      ;
+; 0.801 ; KEY[0]                                                      ; code_lock_projekt:U1|present_state.permanently_locked_state ; KEY[0]       ; CLOCK_50    ; -0.500       ; 2.650      ; 3.217      ;
+; 0.854 ; KEY[0]                                                      ; wrong_code:U2|present_state.err_0                           ; KEY[0]       ; CLOCK_50    ; -0.500       ; 2.650      ; 3.270      ;
+; 0.854 ; KEY[0]                                                      ; wrong_code:U2|present_state.err_1                           ; KEY[0]       ; CLOCK_50    ; -0.500       ; 2.650      ; 3.270      ;
+; 0.854 ; KEY[0]                                                      ; wrong_code:U2|present_state.err_2                           ; KEY[0]       ; CLOCK_50    ; -0.500       ; 2.650      ; 3.270      ;
+; 0.961 ; KEY[0]                                                      ; code_lock_projekt:U1|present_state.unlocked_state           ; KEY[0]       ; CLOCK_50    ; -0.500       ; 2.650      ; 3.377      ;
+; 1.005 ; KEY[0]                                                      ; code_lock_projekt:U1|present_state.evaluating1_state        ; KEY[0]       ; CLOCK_50    ; -0.500       ; 4.126      ; 4.897      ;
+; 1.345 ; code_lock_projekt:U1|present_state.permanently_locked_state ; code_lock_projekt:U1|present_state.wrong_code_state         ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.611      ;
+; 1.347 ; code_lock_projekt:U1|present_state.permanently_locked_state ; code_lock_projekt:U1|present_state.idle_state               ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.613      ;
+; 1.381 ; wrong_code:U2|present_state.err_3                           ; code_lock_projekt:U1|present_state.going_idle_state         ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.647      ;
+; 1.404 ; code_lock_projekt:U1|present_state.going_idle_state         ; code_lock_projekt:U1|present_state.idle_state               ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.670      ;
+; 1.428 ; code_lock_projekt:U1|present_state.idle_state               ; code_lock_projekt:U1|present_state.evaluating1_state        ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 1.476      ; 3.170      ;
+; 1.557 ; wrong_code:U2|present_state.err_2                           ; wrong_code:U2|present_state.err_3                           ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.823      ;
+; 1.622 ; code_lock_projekt:U1|present_state.wrong_code_state         ; code_lock_projekt:U1|present_state.permanently_locked_state ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.888      ;
+; 1.738 ; wrong_code:U2|present_state.err_3                           ; code_lock_projekt:U1|present_state.permanently_locked_state ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 2.004      ;
+; 1.855 ; code_lock_projekt:U1|present_state.idle_state               ; code_lock_projekt:U1|present_state.wrong_code_state         ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 2.121      ;
+; 1.862 ; code_lock_projekt:U1|present_state.unlocked_state           ; code_lock_projekt:U1|present_state.going_idle_state         ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 2.128      ;
+; 1.877 ; code_lock_projekt:U1|present_state.going_idle_state         ; code_lock_projekt:U1|present_state.going_idle_state         ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 2.143      ;
+; 1.902 ; code_lock_projekt:U1|present_state.wrong_code_state         ; code_lock_projekt:U1|present_state.going_idle_state         ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 2.168      ;
+; 1.927 ; code_lock_projekt:U1|present_state.unlocked_state           ; code_lock_projekt:U1|present_state.wrong_code_state         ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 2.193      ;
+; 1.929 ; code_lock_projekt:U1|present_state.unlocked_state           ; code_lock_projekt:U1|present_state.idle_state               ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 2.195      ;
+; 2.134 ; code_lock_projekt:U1|present_state.going_idle_state         ; code_lock_projekt:U1|present_state.wrong_code_state         ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 2.400      ;
+; 2.195 ; code_lock_projekt:U1|present_state.wrong_code_state         ; code_lock_projekt:U1|present_state.idle_state               ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 2.461      ;
+; 2.421 ; code_lock_projekt:U1|present_state.evaluating1_state        ; code_lock_projekt:U1|present_state.unlocked_state           ; CLOCK_50     ; CLOCK_50    ; 0.000        ; -1.476     ; 1.211      ;
+; 2.723 ; code_lock_projekt:U1|present_state.evaluating1_state        ; wrong_code:U2|present_state.err_3                           ; CLOCK_50     ; CLOCK_50    ; 0.000        ; -1.476     ; 1.513      ;
+; 2.753 ; code_lock_projekt:U1|present_state.evaluating1_state        ; code_lock_projekt:U1|present_state.evaluating1_state        ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 3.019      ;
+; 2.887 ; code_lock_projekt:U1|present_state.evaluating1_state        ; code_lock_projekt:U1|present_state.wrong_code_state         ; CLOCK_50     ; CLOCK_50    ; 0.000        ; -1.476     ; 1.677      ;
+; 2.980 ; code_lock_projekt:U1|present_state.evaluating1_state        ; wrong_code:U2|present_state.err_0                           ; CLOCK_50     ; CLOCK_50    ; 0.000        ; -1.476     ; 1.770      ;
+; 2.980 ; code_lock_projekt:U1|present_state.evaluating1_state        ; wrong_code:U2|present_state.err_1                           ; CLOCK_50     ; CLOCK_50    ; 0.000        ; -1.476     ; 1.770      ;
+; 2.980 ; code_lock_projekt:U1|present_state.evaluating1_state        ; wrong_code:U2|present_state.err_2                           ; CLOCK_50     ; CLOCK_50    ; 0.000        ; -1.476     ; 1.770      ;
+; 3.114 ; code_lock_projekt:U1|present_state.evaluating1_state        ; code_lock_projekt:U1|present_state.idle_state               ; CLOCK_50     ; CLOCK_50    ; 0.000        ; -1.476     ; 1.904      ;
++-------+-------------------------------------------------------------+-------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Hold: 'KEY[0]'                                                                                                                                   ;
++-------+---------------------------------------------------+---------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node                                         ; To Node                   ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+---------------------------------------------------+---------------------------+--------------+-------------+--------------+------------+------------+
+; 1.461 ; code_lock_projekt:U1|present_state.unlocked_state ; code_lock_projekt:U1|lock ; CLOCK_50     ; KEY[0]      ; -0.500       ; -0.244     ; 0.717      ;
++-------+---------------------------------------------------+---------------------------+--------------+-------------+--------------+------------+------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Minimum Pulse Width: 'CLOCK_50'                                                                                                      ;
++--------+--------------+----------------+------------------+----------+------------+-------------------------------------------------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock    ; Clock Edge ; Target                                                      ;
++--------+--------------+----------------+------------------+----------+------------+-------------------------------------------------------------+
+; -1.380 ; 1.000        ; 2.380          ; Port Rate        ; CLOCK_50 ; Rise       ; CLOCK_50                                                    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; code_lock_projekt:U1|present_state.evaluating1_state        ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; code_lock_projekt:U1|present_state.evaluating1_state        ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; code_lock_projekt:U1|present_state.going_idle_state         ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; code_lock_projekt:U1|present_state.going_idle_state         ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; code_lock_projekt:U1|present_state.idle_state               ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; code_lock_projekt:U1|present_state.idle_state               ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; code_lock_projekt:U1|present_state.permanently_locked_state ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; code_lock_projekt:U1|present_state.permanently_locked_state ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; code_lock_projekt:U1|present_state.unlocked_state           ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; code_lock_projekt:U1|present_state.unlocked_state           ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; code_lock_projekt:U1|present_state.wrong_code_state         ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; code_lock_projekt:U1|present_state.wrong_code_state         ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; wrong_code:U2|present_state.err_0                           ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; wrong_code:U2|present_state.err_0                           ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; wrong_code:U2|present_state.err_1                           ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; wrong_code:U2|present_state.err_1                           ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; wrong_code:U2|present_state.err_2                           ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; wrong_code:U2|present_state.err_2                           ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; wrong_code:U2|present_state.err_3                           ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; wrong_code:U2|present_state.err_3                           ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; CLOCK_50|combout                                            ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; CLOCK_50|combout                                            ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; CLOCK_50~clkctrl|inclk[0]                                   ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; CLOCK_50~clkctrl|inclk[0]                                   ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; CLOCK_50~clkctrl|outclk                                     ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; CLOCK_50~clkctrl|outclk                                     ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; U1|present_state.evaluating1_state|clk                      ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; U1|present_state.evaluating1_state|clk                      ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; U1|present_state.going_idle_state|clk                       ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; U1|present_state.going_idle_state|clk                       ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; U1|present_state.idle_state|clk                             ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; U1|present_state.idle_state|clk                             ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; U1|present_state.permanently_locked_state|clk               ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; U1|present_state.permanently_locked_state|clk               ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; U1|present_state.unlocked_state|clk                         ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; U1|present_state.unlocked_state|clk                         ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; U1|present_state.wrong_code_state|clk                       ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; U1|present_state.wrong_code_state|clk                       ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; U2|present_state.err_0|clk                                  ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; U2|present_state.err_0|clk                                  ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; U2|present_state.err_1|clk                                  ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; U2|present_state.err_1|clk                                  ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; U2|present_state.err_2|clk                                  ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; U2|present_state.err_2|clk                                  ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; U2|present_state.err_3|clk                                  ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; U2|present_state.err_3|clk                                  ;
++--------+--------------+----------------+------------------+----------+------------+-------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------+
+; Slow Model Minimum Pulse Width: 'KEY[0]'                                                                    ;
++--------+--------------+----------------+------------------+--------+------------+---------------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock  ; Clock Edge ; Target                    ;
++--------+--------------+----------------+------------------+--------+------------+---------------------------+
+; -1.222 ; 1.000        ; 2.222          ; Port Rate        ; KEY[0] ; Rise       ; KEY[0]                    ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; KEY[0] ; Rise       ; KEY[0]|combout            ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; KEY[0] ; Rise       ; KEY[0]|combout            ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; KEY[0] ; Rise       ; U1|Selector0~0|combout    ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; KEY[0] ; Rise       ; U1|Selector0~0|combout    ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; KEY[0] ; Rise       ; U1|Selector0~0|datac      ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; KEY[0] ; Rise       ; U1|Selector0~0|datac      ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; KEY[0] ; Rise       ; U1|lock|datac             ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; KEY[0] ; Rise       ; U1|lock|datac             ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; KEY[0] ; Fall       ; code_lock_projekt:U1|lock ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; KEY[0] ; Fall       ; code_lock_projekt:U1|lock ;
++--------+--------------+----------------+------------------+--------+------------+---------------------------+
+
+
++-----------------------------------------------------------------------+
+; Setup Times                                                           ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; KEY[*]    ; CLOCK_50   ; 5.187 ; 5.187 ; Rise       ; CLOCK_50        ;
+;  KEY[0]   ; CLOCK_50   ; 0.735 ; 0.735 ; Rise       ; CLOCK_50        ;
+;  KEY[1]   ; CLOCK_50   ; 5.187 ; 5.187 ; Rise       ; CLOCK_50        ;
+; SW[*]     ; CLOCK_50   ; 3.648 ; 3.648 ; Rise       ; CLOCK_50        ;
+;  SW[5]    ; CLOCK_50   ; 3.648 ; 3.648 ; Rise       ; CLOCK_50        ;
+;  SW[6]    ; CLOCK_50   ; 3.512 ; 3.512 ; Rise       ; CLOCK_50        ;
+;  SW[7]    ; CLOCK_50   ; 2.949 ; 2.949 ; Rise       ; CLOCK_50        ;
+;  SW[8]    ; CLOCK_50   ; 2.822 ; 2.822 ; Rise       ; CLOCK_50        ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++-------------------------------------------------------------------------+
+; Hold Times                                                              ;
++-----------+------------+--------+--------+------------+-----------------+
+; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-----------+------------+--------+--------+------------+-----------------+
+; KEY[*]    ; CLOCK_50   ; -0.281 ; -0.281 ; Rise       ; CLOCK_50        ;
+;  KEY[0]   ; CLOCK_50   ; -0.281 ; -0.281 ; Rise       ; CLOCK_50        ;
+;  KEY[1]   ; CLOCK_50   ; -3.652 ; -3.652 ; Rise       ; CLOCK_50        ;
+; SW[*]     ; CLOCK_50   ; -1.755 ; -1.755 ; Rise       ; CLOCK_50        ;
+;  SW[5]    ; CLOCK_50   ; -2.581 ; -2.581 ; Rise       ; CLOCK_50        ;
+;  SW[6]    ; CLOCK_50   ; -2.445 ; -2.445 ; Rise       ; CLOCK_50        ;
+;  SW[7]    ; CLOCK_50   ; -1.882 ; -1.882 ; Rise       ; CLOCK_50        ;
+;  SW[8]    ; CLOCK_50   ; -1.755 ; -1.755 ; Rise       ; CLOCK_50        ;
++-----------+------------+--------+--------+------------+-----------------+
+
+
++-------------------------------------------------------------------------+
+; Clock to Output Times                                                   ;
++-----------+------------+--------+--------+------------+-----------------+
+; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-----------+------------+--------+--------+------------+-----------------+
+; LEDG[*]   ; CLOCK_50   ; 8.785  ; 8.785  ; Rise       ; CLOCK_50        ;
+;  LEDG[8]  ; CLOCK_50   ; 8.785  ; 8.785  ; Rise       ; CLOCK_50        ;
+; LEDR[*]   ; CLOCK_50   ; 11.025 ; 11.025 ; Rise       ; CLOCK_50        ;
+;  LEDR[0]  ; CLOCK_50   ; 8.278  ; 8.278  ; Rise       ; CLOCK_50        ;
+;  LEDR[11] ; CLOCK_50   ; 8.595  ; 8.595  ; Rise       ; CLOCK_50        ;
+;  LEDR[12] ; CLOCK_50   ; 11.025 ; 11.025 ; Rise       ; CLOCK_50        ;
+;  LEDR[13] ; CLOCK_50   ; 9.102  ; 9.102  ; Rise       ; CLOCK_50        ;
+;  LEDR[14] ; CLOCK_50   ; 8.752  ; 8.752  ; Rise       ; CLOCK_50        ;
+; LEDG[*]   ; KEY[0]     ; 8.449  ; 8.449  ; Fall       ; KEY[0]          ;
+;  LEDG[0]  ; KEY[0]     ; 8.449  ; 8.449  ; Fall       ; KEY[0]          ;
+;  LEDG[1]  ; KEY[0]     ; 8.449  ; 8.449  ; Fall       ; KEY[0]          ;
+;  LEDG[2]  ; KEY[0]     ; 8.191  ; 8.191  ; Fall       ; KEY[0]          ;
+;  LEDG[3]  ; KEY[0]     ; 8.191  ; 8.191  ; Fall       ; KEY[0]          ;
+;  LEDG[4]  ; KEY[0]     ; 8.231  ; 8.231  ; Fall       ; KEY[0]          ;
+;  LEDG[5]  ; KEY[0]     ; 8.221  ; 8.221  ; Fall       ; KEY[0]          ;
+; LEDR[*]   ; KEY[0]     ; 8.658  ; 8.658  ; Fall       ; KEY[0]          ;
+;  LEDR[1]  ; KEY[0]     ; 8.658  ; 8.658  ; Fall       ; KEY[0]          ;
+;  LEDR[2]  ; KEY[0]     ; 8.625  ; 8.625  ; Fall       ; KEY[0]          ;
+;  LEDR[3]  ; KEY[0]     ; 8.625  ; 8.625  ; Fall       ; KEY[0]          ;
+;  LEDR[4]  ; KEY[0]     ; 8.453  ; 8.453  ; Fall       ; KEY[0]          ;
+;  LEDR[5]  ; KEY[0]     ; 8.453  ; 8.453  ; Fall       ; KEY[0]          ;
++-----------+------------+--------+--------+------------+-----------------+
+
+
++-------------------------------------------------------------------------+
+; Minimum Clock to Output Times                                           ;
++-----------+------------+--------+--------+------------+-----------------+
+; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-----------+------------+--------+--------+------------+-----------------+
+; LEDG[*]   ; CLOCK_50   ; 8.785  ; 8.785  ; Rise       ; CLOCK_50        ;
+;  LEDG[8]  ; CLOCK_50   ; 8.785  ; 8.785  ; Rise       ; CLOCK_50        ;
+; LEDR[*]   ; CLOCK_50   ; 8.278  ; 8.278  ; Rise       ; CLOCK_50        ;
+;  LEDR[0]  ; CLOCK_50   ; 8.278  ; 8.278  ; Rise       ; CLOCK_50        ;
+;  LEDR[11] ; CLOCK_50   ; 8.595  ; 8.595  ; Rise       ; CLOCK_50        ;
+;  LEDR[12] ; CLOCK_50   ; 10.756 ; 10.756 ; Rise       ; CLOCK_50        ;
+;  LEDR[13] ; CLOCK_50   ; 9.102  ; 9.102  ; Rise       ; CLOCK_50        ;
+;  LEDR[14] ; CLOCK_50   ; 8.752  ; 8.752  ; Rise       ; CLOCK_50        ;
+; LEDG[*]   ; KEY[0]     ; 8.191  ; 8.191  ; Fall       ; KEY[0]          ;
+;  LEDG[0]  ; KEY[0]     ; 8.449  ; 8.449  ; Fall       ; KEY[0]          ;
+;  LEDG[1]  ; KEY[0]     ; 8.449  ; 8.449  ; Fall       ; KEY[0]          ;
+;  LEDG[2]  ; KEY[0]     ; 8.191  ; 8.191  ; Fall       ; KEY[0]          ;
+;  LEDG[3]  ; KEY[0]     ; 8.191  ; 8.191  ; Fall       ; KEY[0]          ;
+;  LEDG[4]  ; KEY[0]     ; 8.231  ; 8.231  ; Fall       ; KEY[0]          ;
+;  LEDG[5]  ; KEY[0]     ; 8.221  ; 8.221  ; Fall       ; KEY[0]          ;
+; LEDR[*]   ; KEY[0]     ; 8.453  ; 8.453  ; Fall       ; KEY[0]          ;
+;  LEDR[1]  ; KEY[0]     ; 8.658  ; 8.658  ; Fall       ; KEY[0]          ;
+;  LEDR[2]  ; KEY[0]     ; 8.625  ; 8.625  ; Fall       ; KEY[0]          ;
+;  LEDR[3]  ; KEY[0]     ; 8.625  ; 8.625  ; Fall       ; KEY[0]          ;
+;  LEDR[4]  ; KEY[0]     ; 8.453  ; 8.453  ; Fall       ; KEY[0]          ;
+;  LEDR[5]  ; KEY[0]     ; 8.453  ; 8.453  ; Fall       ; KEY[0]          ;
++-----------+------------+--------+--------+------------+-----------------+
+
+
++-----------------------------------+
+; Fast Model Setup Summary          ;
++----------+--------+---------------+
+; Clock    ; Slack  ; End Point TNS ;
++----------+--------+---------------+
+; KEY[0]   ; -0.702 ; -0.702        ;
+; CLOCK_50 ; -0.447 ; -2.872        ;
++----------+--------+---------------+
+
+
++-----------------------------------+
+; Fast Model Hold Summary           ;
++----------+--------+---------------+
+; Clock    ; Slack  ; End Point TNS ;
++----------+--------+---------------+
+; CLOCK_50 ; -0.208 ; -1.207        ;
+; KEY[0]   ; 1.294  ; 0.000         ;
++----------+--------+---------------+
+
+
+-------------------------------
+; Fast Model Recovery Summary ;
+-------------------------------
+No paths to report.
+
+
+------------------------------
+; Fast Model Removal Summary ;
+------------------------------
+No paths to report.
+
+
++----------------------------------------+
+; Fast Model Minimum Pulse Width Summary ;
++----------+--------+--------------------+
+; Clock    ; Slack  ; End Point TNS      ;
++----------+--------+--------------------+
+; CLOCK_50 ; -1.380 ; -11.380            ;
+; KEY[0]   ; -1.222 ; -1.222             ;
++----------+--------+--------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Setup: 'KEY[0]'                                                                                                                                   ;
++--------+---------------------------------------------------+---------------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node                                         ; To Node                   ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+---------------------------------------------------+---------------------------+--------------+-------------+--------------+------------+------------+
+; -0.702 ; code_lock_projekt:U1|present_state.unlocked_state ; code_lock_projekt:U1|lock ; CLOCK_50     ; KEY[0]      ; 0.500        ; -0.441     ; 0.353      ;
++--------+---------------------------------------------------+---------------------------+--------------+-------------+--------------+------------+------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Setup: 'CLOCK_50'                                                                                                                                                                             ;
++--------+-------------------------------------------------------------+-------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node                                                   ; To Node                                                     ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+-------------------------------------------------------------+-------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; -0.447 ; code_lock_projekt:U1|present_state.evaluating1_state        ; wrong_code:U2|present_state.err_0                           ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.565     ; 0.914      ;
+; -0.447 ; code_lock_projekt:U1|present_state.evaluating1_state        ; wrong_code:U2|present_state.err_1                           ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.565     ; 0.914      ;
+; -0.447 ; code_lock_projekt:U1|present_state.evaluating1_state        ; wrong_code:U2|present_state.err_2                           ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.565     ; 0.914      ;
+; -0.404 ; code_lock_projekt:U1|present_state.evaluating1_state        ; code_lock_projekt:U1|present_state.idle_state               ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.565     ; 0.871      ;
+; -0.402 ; code_lock_projekt:U1|present_state.evaluating1_state        ; code_lock_projekt:U1|present_state.wrong_code_state         ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.565     ; 0.869      ;
+; -0.349 ; code_lock_projekt:U1|present_state.evaluating1_state        ; code_lock_projekt:U1|present_state.evaluating1_state        ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.000      ; 1.381      ;
+; -0.271 ; code_lock_projekt:U1|present_state.evaluating1_state        ; wrong_code:U2|present_state.err_3                           ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.565     ; 0.738      ;
+; -0.119 ; code_lock_projekt:U1|present_state.wrong_code_state         ; code_lock_projekt:U1|present_state.idle_state               ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.000      ; 1.151      ;
+; -0.117 ; code_lock_projekt:U1|present_state.wrong_code_state         ; code_lock_projekt:U1|present_state.wrong_code_state         ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.000      ; 1.149      ;
+; -0.105 ; code_lock_projekt:U1|present_state.evaluating1_state        ; code_lock_projekt:U1|present_state.unlocked_state           ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.565     ; 0.572      ;
+; -0.050 ; code_lock_projekt:U1|present_state.going_idle_state         ; code_lock_projekt:U1|present_state.idle_state               ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.000      ; 1.082      ;
+; -0.048 ; code_lock_projekt:U1|present_state.going_idle_state         ; code_lock_projekt:U1|present_state.wrong_code_state         ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.000      ; 1.080      ;
+; 0.019  ; code_lock_projekt:U1|present_state.unlocked_state           ; code_lock_projekt:U1|present_state.idle_state               ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.000      ; 1.013      ;
+; 0.021  ; code_lock_projekt:U1|present_state.unlocked_state           ; code_lock_projekt:U1|present_state.wrong_code_state         ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.000      ; 1.011      ;
+; 0.031  ; code_lock_projekt:U1|present_state.idle_state               ; code_lock_projekt:U1|present_state.idle_state               ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.000      ; 1.001      ;
+; 0.033  ; code_lock_projekt:U1|present_state.idle_state               ; code_lock_projekt:U1|present_state.wrong_code_state         ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.000      ; 0.999      ;
+; 0.039  ; code_lock_projekt:U1|present_state.wrong_code_state         ; code_lock_projekt:U1|present_state.going_idle_state         ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.000      ; 0.993      ;
+; 0.044  ; code_lock_projekt:U1|present_state.going_idle_state         ; code_lock_projekt:U1|present_state.going_idle_state         ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.000      ; 0.988      ;
+; 0.061  ; code_lock_projekt:U1|present_state.unlocked_state           ; code_lock_projekt:U1|present_state.going_idle_state         ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.000      ; 0.971      ;
+; 0.098  ; wrong_code:U2|present_state.err_3                           ; code_lock_projekt:U1|present_state.permanently_locked_state ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.000      ; 0.934      ;
+; 0.143  ; code_lock_projekt:U1|present_state.idle_state               ; code_lock_projekt:U1|present_state.evaluating1_state        ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.565      ; 1.454      ;
+; 0.163  ; code_lock_projekt:U1|present_state.wrong_code_state         ; code_lock_projekt:U1|present_state.permanently_locked_state ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.000      ; 0.869      ;
+; 0.189  ; wrong_code:U2|present_state.err_2                           ; wrong_code:U2|present_state.err_3                           ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.000      ; 0.843      ;
+; 0.259  ; KEY[0]                                                      ; code_lock_projekt:U1|present_state.evaluating1_state        ; KEY[0]       ; CLOCK_50    ; 0.500        ; 2.194      ; 2.467      ;
+; 0.263  ; code_lock_projekt:U1|present_state.unlocked_state           ; code_lock_projekt:U1|present_state.unlocked_state           ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.000      ; 0.769      ;
+; 0.269  ; code_lock_projekt:U1|present_state.permanently_locked_state ; code_lock_projekt:U1|present_state.idle_state               ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.000      ; 0.763      ;
+; 0.269  ; wrong_code:U2|present_state.err_3                           ; code_lock_projekt:U1|present_state.going_idle_state         ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.000      ; 0.763      ;
+; 0.271  ; code_lock_projekt:U1|present_state.permanently_locked_state ; code_lock_projekt:U1|present_state.wrong_code_state         ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.000      ; 0.761      ;
+; 0.361  ; KEY[0]                                                      ; code_lock_projekt:U1|present_state.unlocked_state           ; KEY[0]       ; CLOCK_50    ; 0.500        ; 1.629      ; 1.800      ;
+; 0.457  ; KEY[0]                                                      ; code_lock_projekt:U1|present_state.going_idle_state         ; KEY[0]       ; CLOCK_50    ; 0.500        ; 1.629      ; 1.704      ;
+; 0.480  ; KEY[0]                                                      ; wrong_code:U2|present_state.err_0                           ; KEY[0]       ; CLOCK_50    ; 0.500        ; 1.629      ; 1.681      ;
+; 0.480  ; KEY[0]                                                      ; wrong_code:U2|present_state.err_1                           ; KEY[0]       ; CLOCK_50    ; 0.500        ; 1.629      ; 1.681      ;
+; 0.480  ; KEY[0]                                                      ; wrong_code:U2|present_state.err_2                           ; KEY[0]       ; CLOCK_50    ; 0.500        ; 1.629      ; 1.681      ;
+; 0.512  ; wrong_code:U2|present_state.err_1                           ; wrong_code:U2|present_state.err_2                           ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.000      ; 0.520      ;
+; 0.517  ; wrong_code:U2|present_state.err_0                           ; wrong_code:U2|present_state.err_1                           ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.000      ; 0.515      ;
+; 0.518  ; KEY[0]                                                      ; code_lock_projekt:U1|present_state.idle_state               ; KEY[0]       ; CLOCK_50    ; 0.500        ; 1.629      ; 1.643      ;
+; 0.520  ; KEY[0]                                                      ; code_lock_projekt:U1|present_state.wrong_code_state         ; KEY[0]       ; CLOCK_50    ; 0.500        ; 1.629      ; 1.641      ;
+; 0.587  ; KEY[0]                                                      ; wrong_code:U2|present_state.err_3                           ; KEY[0]       ; CLOCK_50    ; 0.500        ; 1.629      ; 1.574      ;
+; 0.588  ; KEY[0]                                                      ; code_lock_projekt:U1|present_state.permanently_locked_state ; KEY[0]       ; CLOCK_50    ; 0.500        ; 1.629      ; 1.573      ;
+; 0.665  ; wrong_code:U2|present_state.err_3                           ; wrong_code:U2|present_state.err_3                           ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.000      ; 0.367      ;
+; 0.665  ; code_lock_projekt:U1|present_state.permanently_locked_state ; code_lock_projekt:U1|present_state.permanently_locked_state ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.000      ; 0.367      ;
+; 0.759  ; KEY[0]                                                      ; code_lock_projekt:U1|present_state.evaluating1_state        ; KEY[0]       ; CLOCK_50    ; 1.000        ; 2.194      ; 2.467      ;
+; 0.861  ; KEY[0]                                                      ; code_lock_projekt:U1|present_state.unlocked_state           ; KEY[0]       ; CLOCK_50    ; 1.000        ; 1.629      ; 1.800      ;
+; 0.957  ; KEY[0]                                                      ; code_lock_projekt:U1|present_state.going_idle_state         ; KEY[0]       ; CLOCK_50    ; 1.000        ; 1.629      ; 1.704      ;
+; 0.980  ; KEY[0]                                                      ; wrong_code:U2|present_state.err_0                           ; KEY[0]       ; CLOCK_50    ; 1.000        ; 1.629      ; 1.681      ;
+; 0.980  ; KEY[0]                                                      ; wrong_code:U2|present_state.err_1                           ; KEY[0]       ; CLOCK_50    ; 1.000        ; 1.629      ; 1.681      ;
+; 0.980  ; KEY[0]                                                      ; wrong_code:U2|present_state.err_2                           ; KEY[0]       ; CLOCK_50    ; 1.000        ; 1.629      ; 1.681      ;
+; 1.018  ; KEY[0]                                                      ; code_lock_projekt:U1|present_state.idle_state               ; KEY[0]       ; CLOCK_50    ; 1.000        ; 1.629      ; 1.643      ;
+; 1.020  ; KEY[0]                                                      ; code_lock_projekt:U1|present_state.wrong_code_state         ; KEY[0]       ; CLOCK_50    ; 1.000        ; 1.629      ; 1.641      ;
+; 1.087  ; KEY[0]                                                      ; wrong_code:U2|present_state.err_3                           ; KEY[0]       ; CLOCK_50    ; 1.000        ; 1.629      ; 1.574      ;
+; 1.088  ; KEY[0]                                                      ; code_lock_projekt:U1|present_state.permanently_locked_state ; KEY[0]       ; CLOCK_50    ; 1.000        ; 1.629      ; 1.573      ;
++--------+-------------------------------------------------------------+-------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Hold: 'CLOCK_50'                                                                                                                                                                              ;
++--------+-------------------------------------------------------------+-------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node                                                   ; To Node                                                     ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+-------------------------------------------------------------+-------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; -0.208 ; KEY[0]                                                      ; code_lock_projekt:U1|present_state.wrong_code_state         ; KEY[0]       ; CLOCK_50    ; 0.000        ; 1.629      ; 1.573      ;
+; -0.208 ; KEY[0]                                                      ; code_lock_projekt:U1|present_state.permanently_locked_state ; KEY[0]       ; CLOCK_50    ; 0.000        ; 1.629      ; 1.573      ;
+; -0.207 ; KEY[0]                                                      ; wrong_code:U2|present_state.err_3                           ; KEY[0]       ; CLOCK_50    ; 0.000        ; 1.629      ; 1.574      ;
+; -0.207 ; KEY[0]                                                      ; code_lock_projekt:U1|present_state.idle_state               ; KEY[0]       ; CLOCK_50    ; 0.000        ; 1.629      ; 1.574      ;
+; -0.100 ; KEY[0]                                                      ; wrong_code:U2|present_state.err_0                           ; KEY[0]       ; CLOCK_50    ; 0.000        ; 1.629      ; 1.681      ;
+; -0.100 ; KEY[0]                                                      ; wrong_code:U2|present_state.err_1                           ; KEY[0]       ; CLOCK_50    ; 0.000        ; 1.629      ; 1.681      ;
+; -0.100 ; KEY[0]                                                      ; wrong_code:U2|present_state.err_2                           ; KEY[0]       ; CLOCK_50    ; 0.000        ; 1.629      ; 1.681      ;
+; -0.077 ; KEY[0]                                                      ; code_lock_projekt:U1|present_state.going_idle_state         ; KEY[0]       ; CLOCK_50    ; 0.000        ; 1.629      ; 1.704      ;
+; 0.019  ; KEY[0]                                                      ; code_lock_projekt:U1|present_state.unlocked_state           ; KEY[0]       ; CLOCK_50    ; 0.000        ; 1.629      ; 1.800      ;
+; 0.121  ; KEY[0]                                                      ; code_lock_projekt:U1|present_state.evaluating1_state        ; KEY[0]       ; CLOCK_50    ; 0.000        ; 2.194      ; 2.467      ;
+; 0.215  ; wrong_code:U2|present_state.err_3                           ; wrong_code:U2|present_state.err_3                           ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215  ; code_lock_projekt:U1|present_state.wrong_code_state         ; code_lock_projekt:U1|present_state.wrong_code_state         ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215  ; code_lock_projekt:U1|present_state.permanently_locked_state ; code_lock_projekt:U1|present_state.permanently_locked_state ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215  ; code_lock_projekt:U1|present_state.idle_state               ; code_lock_projekt:U1|present_state.idle_state               ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215  ; code_lock_projekt:U1|present_state.unlocked_state           ; code_lock_projekt:U1|present_state.unlocked_state           ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.367      ;
+; 0.292  ; KEY[0]                                                      ; code_lock_projekt:U1|present_state.wrong_code_state         ; KEY[0]       ; CLOCK_50    ; -0.500       ; 1.629      ; 1.573      ;
+; 0.292  ; KEY[0]                                                      ; code_lock_projekt:U1|present_state.permanently_locked_state ; KEY[0]       ; CLOCK_50    ; -0.500       ; 1.629      ; 1.573      ;
+; 0.293  ; KEY[0]                                                      ; wrong_code:U2|present_state.err_3                           ; KEY[0]       ; CLOCK_50    ; -0.500       ; 1.629      ; 1.574      ;
+; 0.293  ; KEY[0]                                                      ; code_lock_projekt:U1|present_state.idle_state               ; KEY[0]       ; CLOCK_50    ; -0.500       ; 1.629      ; 1.574      ;
+; 0.363  ; wrong_code:U2|present_state.err_0                           ; wrong_code:U2|present_state.err_1                           ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.515      ;
+; 0.368  ; wrong_code:U2|present_state.err_1                           ; wrong_code:U2|present_state.err_2                           ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.520      ;
+; 0.400  ; KEY[0]                                                      ; wrong_code:U2|present_state.err_0                           ; KEY[0]       ; CLOCK_50    ; -0.500       ; 1.629      ; 1.681      ;
+; 0.400  ; KEY[0]                                                      ; wrong_code:U2|present_state.err_1                           ; KEY[0]       ; CLOCK_50    ; -0.500       ; 1.629      ; 1.681      ;
+; 0.400  ; KEY[0]                                                      ; wrong_code:U2|present_state.err_2                           ; KEY[0]       ; CLOCK_50    ; -0.500       ; 1.629      ; 1.681      ;
+; 0.423  ; KEY[0]                                                      ; code_lock_projekt:U1|present_state.going_idle_state         ; KEY[0]       ; CLOCK_50    ; -0.500       ; 1.629      ; 1.704      ;
+; 0.519  ; KEY[0]                                                      ; code_lock_projekt:U1|present_state.unlocked_state           ; KEY[0]       ; CLOCK_50    ; -0.500       ; 1.629      ; 1.800      ;
+; 0.609  ; code_lock_projekt:U1|present_state.permanently_locked_state ; code_lock_projekt:U1|present_state.wrong_code_state         ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.761      ;
+; 0.611  ; wrong_code:U2|present_state.err_3                           ; code_lock_projekt:U1|present_state.going_idle_state         ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.763      ;
+; 0.611  ; code_lock_projekt:U1|present_state.permanently_locked_state ; code_lock_projekt:U1|present_state.idle_state               ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.763      ;
+; 0.621  ; KEY[0]                                                      ; code_lock_projekt:U1|present_state.evaluating1_state        ; KEY[0]       ; CLOCK_50    ; -0.500       ; 2.194      ; 2.467      ;
+; 0.633  ; code_lock_projekt:U1|present_state.going_idle_state         ; code_lock_projekt:U1|present_state.idle_state               ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.785      ;
+; 0.691  ; wrong_code:U2|present_state.err_2                           ; wrong_code:U2|present_state.err_3                           ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.843      ;
+; 0.717  ; code_lock_projekt:U1|present_state.wrong_code_state         ; code_lock_projekt:U1|present_state.permanently_locked_state ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.869      ;
+; 0.737  ; code_lock_projekt:U1|present_state.idle_state               ; code_lock_projekt:U1|present_state.evaluating1_state        ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.565      ; 1.454      ;
+; 0.782  ; wrong_code:U2|present_state.err_3                           ; code_lock_projekt:U1|present_state.permanently_locked_state ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.934      ;
+; 0.819  ; code_lock_projekt:U1|present_state.unlocked_state           ; code_lock_projekt:U1|present_state.going_idle_state         ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.971      ;
+; 0.836  ; code_lock_projekt:U1|present_state.going_idle_state         ; code_lock_projekt:U1|present_state.going_idle_state         ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.988      ;
+; 0.841  ; code_lock_projekt:U1|present_state.wrong_code_state         ; code_lock_projekt:U1|present_state.going_idle_state         ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.993      ;
+; 0.847  ; code_lock_projekt:U1|present_state.idle_state               ; code_lock_projekt:U1|present_state.wrong_code_state         ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.999      ;
+; 0.859  ; code_lock_projekt:U1|present_state.unlocked_state           ; code_lock_projekt:U1|present_state.wrong_code_state         ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.011      ;
+; 0.861  ; code_lock_projekt:U1|present_state.unlocked_state           ; code_lock_projekt:U1|present_state.idle_state               ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.013      ;
+; 0.928  ; code_lock_projekt:U1|present_state.going_idle_state         ; code_lock_projekt:U1|present_state.wrong_code_state         ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.080      ;
+; 0.985  ; code_lock_projekt:U1|present_state.evaluating1_state        ; code_lock_projekt:U1|present_state.unlocked_state           ; CLOCK_50     ; CLOCK_50    ; 0.000        ; -0.565     ; 0.572      ;
+; 0.999  ; code_lock_projekt:U1|present_state.wrong_code_state         ; code_lock_projekt:U1|present_state.idle_state               ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.151      ;
+; 1.151  ; code_lock_projekt:U1|present_state.evaluating1_state        ; wrong_code:U2|present_state.err_3                           ; CLOCK_50     ; CLOCK_50    ; 0.000        ; -0.565     ; 0.738      ;
+; 1.188  ; code_lock_projekt:U1|present_state.evaluating1_state        ; code_lock_projekt:U1|present_state.wrong_code_state         ; CLOCK_50     ; CLOCK_50    ; 0.000        ; -0.565     ; 0.775      ;
+; 1.229  ; code_lock_projekt:U1|present_state.evaluating1_state        ; code_lock_projekt:U1|present_state.evaluating1_state        ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.381      ;
+; 1.284  ; code_lock_projekt:U1|present_state.evaluating1_state        ; code_lock_projekt:U1|present_state.idle_state               ; CLOCK_50     ; CLOCK_50    ; 0.000        ; -0.565     ; 0.871      ;
+; 1.327  ; code_lock_projekt:U1|present_state.evaluating1_state        ; wrong_code:U2|present_state.err_0                           ; CLOCK_50     ; CLOCK_50    ; 0.000        ; -0.565     ; 0.914      ;
+; 1.327  ; code_lock_projekt:U1|present_state.evaluating1_state        ; wrong_code:U2|present_state.err_1                           ; CLOCK_50     ; CLOCK_50    ; 0.000        ; -0.565     ; 0.914      ;
+; 1.327  ; code_lock_projekt:U1|present_state.evaluating1_state        ; wrong_code:U2|present_state.err_2                           ; CLOCK_50     ; CLOCK_50    ; 0.000        ; -0.565     ; 0.914      ;
++--------+-------------------------------------------------------------+-------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Hold: 'KEY[0]'                                                                                                                                   ;
++-------+---------------------------------------------------+---------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node                                         ; To Node                   ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+---------------------------------------------------+---------------------------+--------------+-------------+--------------+------------+------------+
+; 1.294 ; code_lock_projekt:U1|present_state.unlocked_state ; code_lock_projekt:U1|lock ; CLOCK_50     ; KEY[0]      ; -0.500       ; -0.441     ; 0.353      ;
++-------+---------------------------------------------------+---------------------------+--------------+-------------+--------------+------------+------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Minimum Pulse Width: 'CLOCK_50'                                                                                                      ;
++--------+--------------+----------------+------------------+----------+------------+-------------------------------------------------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock    ; Clock Edge ; Target                                                      ;
++--------+--------------+----------------+------------------+----------+------------+-------------------------------------------------------------+
+; -1.380 ; 1.000        ; 2.380          ; Port Rate        ; CLOCK_50 ; Rise       ; CLOCK_50                                                    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; code_lock_projekt:U1|present_state.evaluating1_state        ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; code_lock_projekt:U1|present_state.evaluating1_state        ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; code_lock_projekt:U1|present_state.going_idle_state         ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; code_lock_projekt:U1|present_state.going_idle_state         ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; code_lock_projekt:U1|present_state.idle_state               ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; code_lock_projekt:U1|present_state.idle_state               ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; code_lock_projekt:U1|present_state.permanently_locked_state ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; code_lock_projekt:U1|present_state.permanently_locked_state ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; code_lock_projekt:U1|present_state.unlocked_state           ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; code_lock_projekt:U1|present_state.unlocked_state           ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; code_lock_projekt:U1|present_state.wrong_code_state         ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; code_lock_projekt:U1|present_state.wrong_code_state         ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; wrong_code:U2|present_state.err_0                           ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; wrong_code:U2|present_state.err_0                           ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; wrong_code:U2|present_state.err_1                           ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; wrong_code:U2|present_state.err_1                           ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; wrong_code:U2|present_state.err_2                           ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; wrong_code:U2|present_state.err_2                           ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; wrong_code:U2|present_state.err_3                           ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; wrong_code:U2|present_state.err_3                           ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; CLOCK_50|combout                                            ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; CLOCK_50|combout                                            ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; CLOCK_50~clkctrl|inclk[0]                                   ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; CLOCK_50~clkctrl|inclk[0]                                   ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; CLOCK_50~clkctrl|outclk                                     ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; CLOCK_50~clkctrl|outclk                                     ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; U1|present_state.evaluating1_state|clk                      ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; U1|present_state.evaluating1_state|clk                      ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; U1|present_state.going_idle_state|clk                       ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; U1|present_state.going_idle_state|clk                       ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; U1|present_state.idle_state|clk                             ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; U1|present_state.idle_state|clk                             ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; U1|present_state.permanently_locked_state|clk               ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; U1|present_state.permanently_locked_state|clk               ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; U1|present_state.unlocked_state|clk                         ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; U1|present_state.unlocked_state|clk                         ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; U1|present_state.wrong_code_state|clk                       ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; U1|present_state.wrong_code_state|clk                       ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; U2|present_state.err_0|clk                                  ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; U2|present_state.err_0|clk                                  ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; U2|present_state.err_1|clk                                  ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; U2|present_state.err_1|clk                                  ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; U2|present_state.err_2|clk                                  ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; U2|present_state.err_2|clk                                  ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; U2|present_state.err_3|clk                                  ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; U2|present_state.err_3|clk                                  ;
++--------+--------------+----------------+------------------+----------+------------+-------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------+
+; Fast Model Minimum Pulse Width: 'KEY[0]'                                                                    ;
++--------+--------------+----------------+------------------+--------+------------+---------------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock  ; Clock Edge ; Target                    ;
++--------+--------------+----------------+------------------+--------+------------+---------------------------+
+; -1.222 ; 1.000        ; 2.222          ; Port Rate        ; KEY[0] ; Rise       ; KEY[0]                    ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; KEY[0] ; Rise       ; KEY[0]|combout            ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; KEY[0] ; Rise       ; KEY[0]|combout            ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; KEY[0] ; Rise       ; U1|Selector0~0|combout    ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; KEY[0] ; Rise       ; U1|Selector0~0|combout    ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; KEY[0] ; Rise       ; U1|Selector0~0|datac      ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; KEY[0] ; Rise       ; U1|Selector0~0|datac      ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; KEY[0] ; Rise       ; U1|lock|datac             ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; KEY[0] ; Rise       ; U1|lock|datac             ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; KEY[0] ; Fall       ; code_lock_projekt:U1|lock ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; KEY[0] ; Fall       ; code_lock_projekt:U1|lock ;
++--------+--------------+----------------+------------------+--------+------------+---------------------------+
+
+
++-----------------------------------------------------------------------+
+; Setup Times                                                           ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; KEY[*]    ; CLOCK_50   ; 2.759 ; 2.759 ; Rise       ; CLOCK_50        ;
+;  KEY[0]   ; CLOCK_50   ; 0.241 ; 0.241 ; Rise       ; CLOCK_50        ;
+;  KEY[1]   ; CLOCK_50   ; 2.759 ; 2.759 ; Rise       ; CLOCK_50        ;
+; SW[*]     ; CLOCK_50   ; 1.603 ; 1.603 ; Rise       ; CLOCK_50        ;
+;  SW[5]    ; CLOCK_50   ; 1.603 ; 1.603 ; Rise       ; CLOCK_50        ;
+;  SW[6]    ; CLOCK_50   ; 1.487 ; 1.487 ; Rise       ; CLOCK_50        ;
+;  SW[7]    ; CLOCK_50   ; 1.170 ; 1.170 ; Rise       ; CLOCK_50        ;
+;  SW[8]    ; CLOCK_50   ; 1.094 ; 1.094 ; Rise       ; CLOCK_50        ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++-------------------------------------------------------------------------+
+; Hold Times                                                              ;
++-----------+------------+--------+--------+------------+-----------------+
+; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-----------+------------+--------+--------+------------+-----------------+
+; KEY[*]    ; CLOCK_50   ; 0.208  ; 0.208  ; Rise       ; CLOCK_50        ;
+;  KEY[0]   ; CLOCK_50   ; 0.208  ; 0.208  ; Rise       ; CLOCK_50        ;
+;  KEY[1]   ; CLOCK_50   ; -1.989 ; -1.989 ; Rise       ; CLOCK_50        ;
+; SW[*]     ; CLOCK_50   ; -0.537 ; -0.537 ; Rise       ; CLOCK_50        ;
+;  SW[5]    ; CLOCK_50   ; -1.046 ; -1.046 ; Rise       ; CLOCK_50        ;
+;  SW[6]    ; CLOCK_50   ; -0.930 ; -0.930 ; Rise       ; CLOCK_50        ;
+;  SW[7]    ; CLOCK_50   ; -0.613 ; -0.613 ; Rise       ; CLOCK_50        ;
+;  SW[8]    ; CLOCK_50   ; -0.537 ; -0.537 ; Rise       ; CLOCK_50        ;
++-----------+------------+--------+--------+------------+-----------------+
+
+
++-----------------------------------------------------------------------+
+; Clock to Output Times                                                 ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; LEDG[*]   ; CLOCK_50   ; 4.892 ; 4.892 ; Rise       ; CLOCK_50        ;
+;  LEDG[8]  ; CLOCK_50   ; 4.892 ; 4.892 ; Rise       ; CLOCK_50        ;
+; LEDR[*]   ; CLOCK_50   ; 5.925 ; 5.925 ; Rise       ; CLOCK_50        ;
+;  LEDR[0]  ; CLOCK_50   ; 4.562 ; 4.562 ; Rise       ; CLOCK_50        ;
+;  LEDR[11] ; CLOCK_50   ; 4.799 ; 4.799 ; Rise       ; CLOCK_50        ;
+;  LEDR[12] ; CLOCK_50   ; 5.925 ; 5.925 ; Rise       ; CLOCK_50        ;
+;  LEDR[13] ; CLOCK_50   ; 5.026 ; 5.026 ; Rise       ; CLOCK_50        ;
+;  LEDR[14] ; CLOCK_50   ; 4.864 ; 4.864 ; Rise       ; CLOCK_50        ;
+; LEDG[*]   ; KEY[0]     ; 4.283 ; 4.283 ; Fall       ; KEY[0]          ;
+;  LEDG[0]  ; KEY[0]     ; 4.283 ; 4.283 ; Fall       ; KEY[0]          ;
+;  LEDG[1]  ; KEY[0]     ; 4.283 ; 4.283 ; Fall       ; KEY[0]          ;
+;  LEDG[2]  ; KEY[0]     ; 4.152 ; 4.152 ; Fall       ; KEY[0]          ;
+;  LEDG[3]  ; KEY[0]     ; 4.152 ; 4.152 ; Fall       ; KEY[0]          ;
+;  LEDG[4]  ; KEY[0]     ; 4.192 ; 4.192 ; Fall       ; KEY[0]          ;
+;  LEDG[5]  ; KEY[0]     ; 4.182 ; 4.182 ; Fall       ; KEY[0]          ;
+; LEDR[*]   ; KEY[0]     ; 4.378 ; 4.378 ; Fall       ; KEY[0]          ;
+;  LEDR[1]  ; KEY[0]     ; 4.378 ; 4.378 ; Fall       ; KEY[0]          ;
+;  LEDR[2]  ; KEY[0]     ; 4.345 ; 4.345 ; Fall       ; KEY[0]          ;
+;  LEDR[3]  ; KEY[0]     ; 4.345 ; 4.345 ; Fall       ; KEY[0]          ;
+;  LEDR[4]  ; KEY[0]     ; 4.286 ; 4.286 ; Fall       ; KEY[0]          ;
+;  LEDR[5]  ; KEY[0]     ; 4.286 ; 4.286 ; Fall       ; KEY[0]          ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++-----------------------------------------------------------------------+
+; Minimum Clock to Output Times                                         ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; LEDG[*]   ; CLOCK_50   ; 4.892 ; 4.892 ; Rise       ; CLOCK_50        ;
+;  LEDG[8]  ; CLOCK_50   ; 4.892 ; 4.892 ; Rise       ; CLOCK_50        ;
+; LEDR[*]   ; CLOCK_50   ; 4.562 ; 4.562 ; Rise       ; CLOCK_50        ;
+;  LEDR[0]  ; CLOCK_50   ; 4.562 ; 4.562 ; Rise       ; CLOCK_50        ;
+;  LEDR[11] ; CLOCK_50   ; 4.799 ; 4.799 ; Rise       ; CLOCK_50        ;
+;  LEDR[12] ; CLOCK_50   ; 5.824 ; 5.824 ; Rise       ; CLOCK_50        ;
+;  LEDR[13] ; CLOCK_50   ; 5.026 ; 5.026 ; Rise       ; CLOCK_50        ;
+;  LEDR[14] ; CLOCK_50   ; 4.864 ; 4.864 ; Rise       ; CLOCK_50        ;
+; LEDG[*]   ; KEY[0]     ; 4.152 ; 4.152 ; Fall       ; KEY[0]          ;
+;  LEDG[0]  ; KEY[0]     ; 4.283 ; 4.283 ; Fall       ; KEY[0]          ;
+;  LEDG[1]  ; KEY[0]     ; 4.283 ; 4.283 ; Fall       ; KEY[0]          ;
+;  LEDG[2]  ; KEY[0]     ; 4.152 ; 4.152 ; Fall       ; KEY[0]          ;
+;  LEDG[3]  ; KEY[0]     ; 4.152 ; 4.152 ; Fall       ; KEY[0]          ;
+;  LEDG[4]  ; KEY[0]     ; 4.192 ; 4.192 ; Fall       ; KEY[0]          ;
+;  LEDG[5]  ; KEY[0]     ; 4.182 ; 4.182 ; Fall       ; KEY[0]          ;
+; LEDR[*]   ; KEY[0]     ; 4.286 ; 4.286 ; Fall       ; KEY[0]          ;
+;  LEDR[1]  ; KEY[0]     ; 4.378 ; 4.378 ; Fall       ; KEY[0]          ;
+;  LEDR[2]  ; KEY[0]     ; 4.345 ; 4.345 ; Fall       ; KEY[0]          ;
+;  LEDR[3]  ; KEY[0]     ; 4.345 ; 4.345 ; Fall       ; KEY[0]          ;
+;  LEDR[4]  ; KEY[0]     ; 4.286 ; 4.286 ; Fall       ; KEY[0]          ;
+;  LEDR[5]  ; KEY[0]     ; 4.286 ; 4.286 ; Fall       ; KEY[0]          ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++--------------------------------------------------------------------------------+
+; Multicorner Timing Analysis Summary                                            ;
++------------------+---------+--------+----------+---------+---------------------+
+; Clock            ; Setup   ; Hold   ; Recovery ; Removal ; Minimum Pulse Width ;
++------------------+---------+--------+----------+---------+---------------------+
+; Worst-case Slack ; -2.344  ; -0.208 ; N/A      ; N/A     ; -1.380              ;
+;  CLOCK_50        ; -2.344  ; -0.208 ; N/A      ; N/A     ; -1.380              ;
+;  KEY[0]          ; -1.446  ; 1.294  ; N/A      ; N/A     ; -1.222              ;
+; Design-wide TNS  ; -20.449 ; -1.207 ; 0.0      ; 0.0     ; -12.602             ;
+;  CLOCK_50        ; -19.003 ; -1.207 ; N/A      ; N/A     ; -11.380             ;
+;  KEY[0]          ; -1.446  ; 0.000  ; N/A      ; N/A     ; -1.222              ;
++------------------+---------+--------+----------+---------+---------------------+
+
+
++-----------------------------------------------------------------------+
+; Setup Times                                                           ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; KEY[*]    ; CLOCK_50   ; 5.187 ; 5.187 ; Rise       ; CLOCK_50        ;
+;  KEY[0]   ; CLOCK_50   ; 0.735 ; 0.735 ; Rise       ; CLOCK_50        ;
+;  KEY[1]   ; CLOCK_50   ; 5.187 ; 5.187 ; Rise       ; CLOCK_50        ;
+; SW[*]     ; CLOCK_50   ; 3.648 ; 3.648 ; Rise       ; CLOCK_50        ;
+;  SW[5]    ; CLOCK_50   ; 3.648 ; 3.648 ; Rise       ; CLOCK_50        ;
+;  SW[6]    ; CLOCK_50   ; 3.512 ; 3.512 ; Rise       ; CLOCK_50        ;
+;  SW[7]    ; CLOCK_50   ; 2.949 ; 2.949 ; Rise       ; CLOCK_50        ;
+;  SW[8]    ; CLOCK_50   ; 2.822 ; 2.822 ; Rise       ; CLOCK_50        ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++-------------------------------------------------------------------------+
+; Hold Times                                                              ;
++-----------+------------+--------+--------+------------+-----------------+
+; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-----------+------------+--------+--------+------------+-----------------+
+; KEY[*]    ; CLOCK_50   ; 0.208  ; 0.208  ; Rise       ; CLOCK_50        ;
+;  KEY[0]   ; CLOCK_50   ; 0.208  ; 0.208  ; Rise       ; CLOCK_50        ;
+;  KEY[1]   ; CLOCK_50   ; -1.989 ; -1.989 ; Rise       ; CLOCK_50        ;
+; SW[*]     ; CLOCK_50   ; -0.537 ; -0.537 ; Rise       ; CLOCK_50        ;
+;  SW[5]    ; CLOCK_50   ; -1.046 ; -1.046 ; Rise       ; CLOCK_50        ;
+;  SW[6]    ; CLOCK_50   ; -0.930 ; -0.930 ; Rise       ; CLOCK_50        ;
+;  SW[7]    ; CLOCK_50   ; -0.613 ; -0.613 ; Rise       ; CLOCK_50        ;
+;  SW[8]    ; CLOCK_50   ; -0.537 ; -0.537 ; Rise       ; CLOCK_50        ;
++-----------+------------+--------+--------+------------+-----------------+
+
+
++-------------------------------------------------------------------------+
+; Clock to Output Times                                                   ;
++-----------+------------+--------+--------+------------+-----------------+
+; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-----------+------------+--------+--------+------------+-----------------+
+; LEDG[*]   ; CLOCK_50   ; 8.785  ; 8.785  ; Rise       ; CLOCK_50        ;
+;  LEDG[8]  ; CLOCK_50   ; 8.785  ; 8.785  ; Rise       ; CLOCK_50        ;
+; LEDR[*]   ; CLOCK_50   ; 11.025 ; 11.025 ; Rise       ; CLOCK_50        ;
+;  LEDR[0]  ; CLOCK_50   ; 8.278  ; 8.278  ; Rise       ; CLOCK_50        ;
+;  LEDR[11] ; CLOCK_50   ; 8.595  ; 8.595  ; Rise       ; CLOCK_50        ;
+;  LEDR[12] ; CLOCK_50   ; 11.025 ; 11.025 ; Rise       ; CLOCK_50        ;
+;  LEDR[13] ; CLOCK_50   ; 9.102  ; 9.102  ; Rise       ; CLOCK_50        ;
+;  LEDR[14] ; CLOCK_50   ; 8.752  ; 8.752  ; Rise       ; CLOCK_50        ;
+; LEDG[*]   ; KEY[0]     ; 8.449  ; 8.449  ; Fall       ; KEY[0]          ;
+;  LEDG[0]  ; KEY[0]     ; 8.449  ; 8.449  ; Fall       ; KEY[0]          ;
+;  LEDG[1]  ; KEY[0]     ; 8.449  ; 8.449  ; Fall       ; KEY[0]          ;
+;  LEDG[2]  ; KEY[0]     ; 8.191  ; 8.191  ; Fall       ; KEY[0]          ;
+;  LEDG[3]  ; KEY[0]     ; 8.191  ; 8.191  ; Fall       ; KEY[0]          ;
+;  LEDG[4]  ; KEY[0]     ; 8.231  ; 8.231  ; Fall       ; KEY[0]          ;
+;  LEDG[5]  ; KEY[0]     ; 8.221  ; 8.221  ; Fall       ; KEY[0]          ;
+; LEDR[*]   ; KEY[0]     ; 8.658  ; 8.658  ; Fall       ; KEY[0]          ;
+;  LEDR[1]  ; KEY[0]     ; 8.658  ; 8.658  ; Fall       ; KEY[0]          ;
+;  LEDR[2]  ; KEY[0]     ; 8.625  ; 8.625  ; Fall       ; KEY[0]          ;
+;  LEDR[3]  ; KEY[0]     ; 8.625  ; 8.625  ; Fall       ; KEY[0]          ;
+;  LEDR[4]  ; KEY[0]     ; 8.453  ; 8.453  ; Fall       ; KEY[0]          ;
+;  LEDR[5]  ; KEY[0]     ; 8.453  ; 8.453  ; Fall       ; KEY[0]          ;
++-----------+------------+--------+--------+------------+-----------------+
+
+
++-----------------------------------------------------------------------+
+; Minimum Clock to Output Times                                         ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; LEDG[*]   ; CLOCK_50   ; 4.892 ; 4.892 ; Rise       ; CLOCK_50        ;
+;  LEDG[8]  ; CLOCK_50   ; 4.892 ; 4.892 ; Rise       ; CLOCK_50        ;
+; LEDR[*]   ; CLOCK_50   ; 4.562 ; 4.562 ; Rise       ; CLOCK_50        ;
+;  LEDR[0]  ; CLOCK_50   ; 4.562 ; 4.562 ; Rise       ; CLOCK_50        ;
+;  LEDR[11] ; CLOCK_50   ; 4.799 ; 4.799 ; Rise       ; CLOCK_50        ;
+;  LEDR[12] ; CLOCK_50   ; 5.824 ; 5.824 ; Rise       ; CLOCK_50        ;
+;  LEDR[13] ; CLOCK_50   ; 5.026 ; 5.026 ; Rise       ; CLOCK_50        ;
+;  LEDR[14] ; CLOCK_50   ; 4.864 ; 4.864 ; Rise       ; CLOCK_50        ;
+; LEDG[*]   ; KEY[0]     ; 4.152 ; 4.152 ; Fall       ; KEY[0]          ;
+;  LEDG[0]  ; KEY[0]     ; 4.283 ; 4.283 ; Fall       ; KEY[0]          ;
+;  LEDG[1]  ; KEY[0]     ; 4.283 ; 4.283 ; Fall       ; KEY[0]          ;
+;  LEDG[2]  ; KEY[0]     ; 4.152 ; 4.152 ; Fall       ; KEY[0]          ;
+;  LEDG[3]  ; KEY[0]     ; 4.152 ; 4.152 ; Fall       ; KEY[0]          ;
+;  LEDG[4]  ; KEY[0]     ; 4.192 ; 4.192 ; Fall       ; KEY[0]          ;
+;  LEDG[5]  ; KEY[0]     ; 4.182 ; 4.182 ; Fall       ; KEY[0]          ;
+; LEDR[*]   ; KEY[0]     ; 4.286 ; 4.286 ; Fall       ; KEY[0]          ;
+;  LEDR[1]  ; KEY[0]     ; 4.378 ; 4.378 ; Fall       ; KEY[0]          ;
+;  LEDR[2]  ; KEY[0]     ; 4.345 ; 4.345 ; Fall       ; KEY[0]          ;
+;  LEDR[3]  ; KEY[0]     ; 4.345 ; 4.345 ; Fall       ; KEY[0]          ;
+;  LEDR[4]  ; KEY[0]     ; 4.286 ; 4.286 ; Fall       ; KEY[0]          ;
+;  LEDR[5]  ; KEY[0]     ; 4.286 ; 4.286 ; Fall       ; KEY[0]          ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++-------------------------------------------------------------------+
+; Setup Transfers                                                   ;
++------------+----------+----------+----------+----------+----------+
+; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------+----------+----------+----------+----------+----------+
+; CLOCK_50   ; CLOCK_50 ; 36       ; 0        ; 0        ; 0        ;
+; KEY[0]     ; CLOCK_50 ; 14       ; 14       ; 0        ; 0        ;
+; CLOCK_50   ; KEY[0]   ; 0        ; 0        ; 1        ; 0        ;
++------------+----------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
++-------------------------------------------------------------------+
+; Hold Transfers                                                    ;
++------------+----------+----------+----------+----------+----------+
+; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------+----------+----------+----------+----------+----------+
+; CLOCK_50   ; CLOCK_50 ; 36       ; 0        ; 0        ; 0        ;
+; KEY[0]     ; CLOCK_50 ; 14       ; 14       ; 0        ; 0        ;
+; CLOCK_50   ; KEY[0]   ; 0        ; 0        ; 1        ; 0        ;
++------------+----------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
+---------------
+; Report TCCS ;
+---------------
+No dedicated SERDES Transmitter circuitry present in device or used in design
+
+
+---------------
+; Report RSKM ;
+---------------
+No dedicated SERDES Receiver circuitry present in device or used in design
+
+
++------------------------------------------------+
+; Unconstrained Paths                            ;
++---------------------------------+-------+------+
+; Property                        ; Setup ; Hold ;
++---------------------------------+-------+------+
+; Illegal Clocks                  ; 0     ; 0    ;
+; Unconstrained Clocks            ; 0     ; 0    ;
+; Unconstrained Input Ports       ; 5     ; 5    ;
+; Unconstrained Input Port Paths  ; 34    ; 34   ;
+; Unconstrained Output Ports      ; 17    ; 17   ;
+; Unconstrained Output Port Paths ; 18    ; 18   ;
++---------------------------------+-------+------+
+
+
++------------------------------------+
+; TimeQuest Timing Analyzer Messages ;
++------------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit TimeQuest Timing Analyzer
+    Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+    Info: Processing started: Sun Jun 06 10:18:32 2021
+Info: Command: quartus_sta code_lock_2_semesterprojekt -c code_lock_2_semesterprojekt
+Info: qsta_default_script.tcl version: #1
+Warning (20028): Parallel compilation is not licensed and has been disabled
+Info (21077): Low junction temperature is 0 degrees C
+Info (21077): High junction temperature is 85 degrees C
+Warning (335093): TimeQuest Timing Analyzer is analyzing 1 combinational loops as latches.
+Critical Warning (332012): Synopsys Design Constraints File file not found: 'code_lock_2_semesterprojekt.sdc'. A Synopsys Design Constraints File is required by the TimeQuest Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
+Info (332142): No user constrained base clocks found in the design. Calling "derive_clocks -period 1.0"
+Info (332105): Deriving Clocks
+    Info (332105): create_clock -period 1.000 -name CLOCK_50 CLOCK_50
+    Info (332105): create_clock -period 1.000 -name KEY[0] KEY[0]
+Info: Found TIMEQUEST_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
+Info: Analyzing Slow Model
+Critical Warning (332148): Timing requirements not met
+Info (332146): Worst-case setup slack is -2.344
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -2.344       -19.003 CLOCK_50 
+    Info (332119):    -1.446        -1.446 KEY[0] 
+Info (332146): Worst-case hold slack is 0.281
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):     0.281         0.000 CLOCK_50 
+    Info (332119):     1.461         0.000 KEY[0] 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is -1.380
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -1.380       -11.380 CLOCK_50 
+    Info (332119):    -1.222        -1.222 KEY[0] 
+Info (332001): The selected device family is not supported by the report_metastability command.
+Info: Analyzing Fast Model
+Critical Warning (332148): Timing requirements not met
+Info (332146): Worst-case setup slack is -0.702
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -0.702        -0.702 KEY[0] 
+    Info (332119):    -0.447        -2.872 CLOCK_50 
+Info (332146): Worst-case hold slack is -0.208
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -0.208        -1.207 CLOCK_50 
+    Info (332119):     1.294         0.000 KEY[0] 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is -1.380
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -1.380       -11.380 CLOCK_50 
+    Info (332119):    -1.222        -1.222 KEY[0] 
+Info (332001): The selected device family is not supported by the report_metastability command.
+Info (332102): Design is not fully constrained for setup requirements
+Info (332102): Design is not fully constrained for hold requirements
+Info: Quartus II 64-Bit TimeQuest Timing Analyzer was successful. 0 errors, 5 warnings
+    Info: Peak virtual memory: 4540 megabytes
+    Info: Processing ended: Sun Jun 06 10:18:33 2021
+    Info: Elapsed time: 00:00:01
+    Info: Total CPU time (on all processors): 00:00:01
+
+

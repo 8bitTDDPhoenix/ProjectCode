@@ -1,0 +1,83 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+use work.all;
+
+entity code_lock_projekt is
+port(enter : in std_logic;
+        code : in std_logic_vector(3 downto 0);
+        clk  : in std_logic;
+      reset : in std_logic; 
+       lock : out std_logic;
+		 permanently_locked_out : out std_logic
+		 
+		 
+        );
+end code_lock_projekt;
+
+architecture arc of code_lock_projekt is
+
+constant code1 : std_logic_vector(3 downto 0) := "1000";
+
+-- inner states "locked"
+type state is (idle, ev_c1, going_idle,unlocked,wrong_code,permanently_locked);
+signal present_state, next_state: state;
+
+begin
+    state_reg : process(clk, reset) --moore/hppymeal
+    begin
+        if reset = '0' then -- KEY active LOW 
+            present_state <= idle;
+
+        elsif rising_edge(clk) then
+            present_state <= next_state;
+        end if;
+    end process;
+next_state_logic : process(present_state)
+ begin
+        --default
+        next_state <= present_state;
+		  err_event <= '0';
+                case present_state is
+                    when idle =>
+                        if (enter = '0') then
+                            next_state <= ev_c1;
+                        end if;
+                    when ev_c1 =>
+                        if (code = code1) AND (enter ='1') then
+                            next_state <= unlocked;
+                        elsif(code /= code1) AND (enter ='1') then
+                            next_state <= wrong_code;
+                            err_event <= '1';
+                        end if;
+								
+							When unlocked =>
+							     if enter = '0' then
+								  next_state <= going_idle;
+								  end if;
+								  
+							When going_idle =>
+							     if enter = '1' then
+								     next_state <= idle;
+								  end if;
+						
+						   when wrong_code => 
+                        if(enter ='0') then
+                            if((err_event = '1') AND (failed = '0')) then
+                                next_state <= going_idle;
+                            elsif(failed = '1') then
+                                next_state <= permanently_locked;
+                            end if;	
+									end if; 
+							  when permanently_locked => 
+                        if(enter = '0') OR (enter = '1') then
+                            next_state <= permanently_locked;
+								elsif
+								(reset = '1') then
+								next_state <= going_idle;
+								
+                        end if; 
+							when others =>
+						        next_state <= idle;	
+				end case;
+end process;
